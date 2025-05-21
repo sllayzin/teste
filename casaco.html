@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Casaco - CLOWEAR</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+  <link rel="shortcut icon" href="img/logo.PNG" />
+  <style>
+    .form-compra { display: none; }
+    .voltar {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .btn-voltar {
+      background-color: #333;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-voltar:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topo">
+      <div class="logo">
+        <img src="img/logo.PNG" alt="Logo da Clowear" />
+        <h1>Casaco</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="galeria">
+      <div class="item">
+        <img src="img/casaco.jpg" alt="Casaco estiloso" />
+        <div class="info">
+          <h2>Casaco</h2>
+          <p>Casaco estiloso para o inverno, feito com material resistente à água.</p>
+          <span class="preco">R$ 199,90</span>
+          <button onclick="mostrarFormulario()">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-compra" id="formCompra">
+      <h2>Formulário de Compra</h2>
+      <form action="#" method="POST">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" value="1" required />
+        <label for="endereco">Endereço de entrega:</label>
+        <textarea id="endereco" name="endereco" rows="3" required></textarea>
+        <button type="submit">Finalizar Compra</button>
+      </form>
+    </section>
+  </main>
+
+  <div class="voltar">
+    <a href="index.html" class="btn-voltar">← Voltar para a Página Inicial</a>
+  </div>
+
+  <script>
+    function mostrarFormulario() {
+      document.getElementById('formCompra').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('formCompra').offsetTop - 20, behavior: 'smooth' });
+    }
+  </script>
+</body>
+<script src="js/script.js"></script>
+
+</html>
